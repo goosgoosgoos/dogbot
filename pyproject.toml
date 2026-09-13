@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dogbot-modular"
+version = "3.0.4"
+requires-python = ">=3.10"
+dependencies = [
+  "aiohttp>=3.9",
+  "aiosqlite>=0.20",
+  "slixmpp>=1.8",
+  "aiohttp-socks>=0.9",
+  "beautifulsoup4>=4.12",
+]
+
+[project.optional-dependencies]
+# Лучше по качеству извлекает основной текст статьи, чем bs4, но
+# тяжелее по зависимостям. dogbot/web.py сам определяет, что
+# установлено, и падает на bs4/regex-фолбэк, если её нет — см.
+# dogbot/web.py:_extract_content.
+web-extra = ["trafilatura>=1.8"]
+
+[tool.setuptools.packages.find]
+include = ["dogbot*"]

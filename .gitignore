@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Runtime database
+dog_bot.db
+dog_bot.db-shm
+dog_bot.db-wal
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Backups
+backup/
+backups/
+
+# Logs
+*.log
+logs/
+
+# Test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local archives
+archive_doggbot.zip
+
+# Local helper scripts
+zip.sh
